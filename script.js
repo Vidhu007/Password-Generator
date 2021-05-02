@@ -60,6 +60,16 @@ function arrayFromLowToHigh(low, high) {
       const characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
       passwordCharacters.push(String.fromCharCode(characterCode))
     }
+
+   
     return passwordCharacters.join('')
     // this will return the array as string
   }
+ 
+  function copyPassword() {
+  var copyText = document.getElementById("passwordDisplay");
+  copyText.select()
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy")
+  alert("Copied the text: " + copyText.value);
+}
